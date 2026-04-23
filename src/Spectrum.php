@@ -78,6 +78,7 @@ final class Spectrum extends PluginBase
 
 		ProtocolInfo::SET_DISPLAY_OBJECTIVE_PACKET => true,
 		ProtocolInfo::START_GAME_PACKET => true,
+        ProtocolInfo::DISCONNECT_PACKET => true,
 	];
 
     /**
