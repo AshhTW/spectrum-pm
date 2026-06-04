@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "cooldogedev\\Spectrum\\": "src/"
-        }
+        },
+        "exclude-from-classmap": [
+            "src/compat/ByteBuffer.php"
+        ]
     },
     "minimum-stability": "dev",
     "authors": [
