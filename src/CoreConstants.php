@@ -39,3 +39,4 @@ if (defined("spectrum\COMPOSER_AUTOLOADER_PATH")) {
 }
 
 define("spectrum\COMPOSER_AUTOLOADER_PATH", dirname(__DIR__) . "/vendor/autoload.php");
+define("spectrum\ENCODING_BYTE_BUFFER_COMPAT_PATH", dirname(__DIR__) . "/compat/ByteBuffer.php");

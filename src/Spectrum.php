@@ -45,6 +45,7 @@ use pocketmine\network\query\DedicatedQueryNetworkInterface;
 use pocketmine\plugin\PluginBase;
 use function is_file;
 use const spectrum\COMPOSER_AUTOLOADER_PATH;
+use const spectrum\ENCODING_BYTE_BUFFER_COMPAT_PATH;
 
 require_once "CoreConstants.php";
 
@@ -98,6 +99,7 @@ final class Spectrum extends PluginBase
             return;
         }
         require_once(COMPOSER_AUTOLOADER_PATH);
+        require_once(ENCODING_BYTE_BUFFER_COMPAT_PATH);
         $asyncPool = $this->getServer()->getAsyncPool();
         $asyncPool->addWorkerStartHook(static function (int $workerId) use ($asyncPool): void {
             $asyncPool->submitTaskToWorker(new ComposerRegisterAsyncTask(COMPOSER_AUTOLOADER_PATH), $workerId);

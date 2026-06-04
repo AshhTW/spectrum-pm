@@ -53,6 +53,7 @@ final class ClientThread extends Thread
         private readonly ThreadSafeLogger    $logger,
 
         private readonly string              $autoloaderPath,
+        private readonly string              $byteBufferCompatPath,
         private readonly int                 $port,
     ) {}
 
@@ -67,6 +68,7 @@ final class ClientThread extends Thread
         GlobalLogger::set($this->logger);
 
         require $this->autoloaderPath;
+        require_once $this->byteBufferCompatPath;
 
         $this->running = true;
 

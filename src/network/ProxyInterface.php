@@ -80,6 +80,7 @@ use const AF_INET;
 use const AF_UNIX;
 use const SOCK_STREAM;
 use const spectrum\COMPOSER_AUTOLOADER_PATH;
+use const spectrum\ENCODING_BYTE_BUFFER_COMPAT_PATH;
 
 final class ProxyInterface implements NetworkInterface
 {
@@ -129,6 +130,7 @@ final class ProxyInterface implements NetworkInterface
             logger: $server->getLogger(),
 
             autoloaderPath: COMPOSER_AUTOLOADER_PATH,
+            byteBufferCompatPath: ENCODING_BYTE_BUFFER_COMPAT_PATH,
             port: $server->getPort(),
         );
         $this->typeConverter = TypeConverter::getInstance();
